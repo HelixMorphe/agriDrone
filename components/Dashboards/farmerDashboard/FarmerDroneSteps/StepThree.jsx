@@ -3,7 +3,8 @@ import dayjs from "dayjs";
 import TextField from "@mui/material/TextField";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { DateTimePicker as DatePicker } from "@mui/x-date-pickers/DateTimePicker";
+import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import Box from "@mui/material/Box";
 
 const StepThree = ({
@@ -15,6 +16,11 @@ const StepThree = ({
 }) => {
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
+  const [value, setValue] = React.useState(dayjs("2014-08-18T21:11:54"));
+
+  const handleChange = (newValue) => {
+    setValue(newValue);
+  };
 
   useEffect(() => {
     if (startDate && endDate) {
@@ -54,6 +60,18 @@ const StepThree = ({
             date={endDate}
             setDate={setEndDate}
           />
+          {/* <TimePicker
+            label="Time"
+            value={value}
+            onChange={handleChange}
+            renderInput={(params) => <TextField {...params} />}
+          /> */}
+          {/* <TimePicker
+            label="Time"
+            value={value}
+            onChange={handleChange}
+            renderInput={(params) => <TextField {...params} />}
+          /> */}
         </div>
         {startDate && endDate && (
           <div className="border min-w-[500px] p-6 shadow-md rounded-xl">
