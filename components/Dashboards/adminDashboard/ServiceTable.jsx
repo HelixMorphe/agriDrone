@@ -159,15 +159,27 @@ export default function BasicTable() {
           >
             <div className="loader text-blue-600"></div>
           </div>
-          <div
-            className={`${confirmed || simulationConfirmed ? "hidden" : ""}`}
-          >
-            <p
-              onClick={() => handleStartService()}
-              className="bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-200 text-white inline-block px-4 py-2 rounded-lg cursor-pointer"
+          <div className="flex gap-10">
+            <div
+              className={`${confirmed || simulationConfirmed ? "hidden" : ""}`}
             >
-              Confirm
-            </p>
+              <p
+                onClick={() => handleStartService()}
+                className="bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-200 text-white inline-block px-4 py-2 rounded-lg cursor-pointer"
+              >
+                Confirm
+              </p>
+            </div>
+            <div
+              className={`${confirmed || simulationConfirmed ? "hidden" : ""}`}
+            >
+              <p
+                onClick={() => handleStartService()}
+                className="bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-200 text-white inline-block px-4 py-2 rounded-lg cursor-pointer"
+              >
+                Save
+              </p>
+            </div>
           </div>
           <div
             className={`${

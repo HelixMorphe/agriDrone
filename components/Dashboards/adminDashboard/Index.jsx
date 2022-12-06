@@ -95,21 +95,11 @@ const Heading = () => {
 };
 const Stats = ({ droneData, pieChartData }) => {
   const data01 = [
-    { name: "Group A", value: 400 },
-    { name: "Group B", value: 300 },
-    { name: "Group C", value: 300 },
-    { name: "Group D", value: 200 },
-    { name: "Group E", value: 278 },
-    { name: "Group F", value: 189 },
+    { name: "Payload", value: 400 },
+    { name: "Surviellence", value: 300 },
+    { name: "Data Collection", value: 300 },
   ];
-  const data02 = [
-    { name: "Group A", value: 2400 },
-    { name: "Group B", value: 4567 },
-    { name: "Group C", value: 1398 },
-    { name: "Group D", value: 9800 },
-    { name: "Group E", value: 3908 },
-    { name: "Group F", value: 4800 },
-  ];
+
   return (
     <div className="max-w-2xl p-8 shadow-lg bg-white rounded-2xl">
       <h1 className="mb-4 text-2xl font-bold text-gray-800">
@@ -155,20 +145,37 @@ const Stats = ({ droneData, pieChartData }) => {
           </div>
         </div>
       </div> */}
-      <div className="flex justify-center max-h-[400px]">
-        <PieChart width={400} height={400}>
-          <Pie
-            dataKey="value"
-            isAnimationActive={false}
-            data={pieChartData}
-            cx="50%"
-            cy="50%"
-            outerRadius={80}
-            fill="#8884d8"
-            label
-          />
-          <Tooltip />
-        </PieChart>
+      <div className="">
+        <div className="flex justify-center max-h-[400px]">
+          <PieChart width={400} height={400}>
+            <Pie
+              dataKey="value"
+              isAnimationActive={false}
+              data={pieChartData}
+              cx="50%"
+              cy="50%"
+              outerRadius={80}
+              fill="#8884d8"
+              label
+            />
+            <Tooltip />
+          </PieChart>
+        </div>
+        <div className="flex justify-center max-h-[400px]">
+          <PieChart width={400} height={400}>
+            <Pie
+              dataKey="value"
+              isAnimationActive={false}
+              data={data01}
+              cx="50%"
+              cy="50%"
+              outerRadius={80}
+              fill="#8884d8"
+              label
+            />
+            <Tooltip />
+          </PieChart>
+        </div>
       </div>
       <div className="mt-5">
         <h2 className="text-gray-500 text-sm">Drone Models</h2>

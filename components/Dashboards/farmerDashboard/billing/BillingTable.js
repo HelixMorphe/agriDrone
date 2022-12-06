@@ -352,7 +352,7 @@ export default function EnhancedTable({ user }) {
 
   const handleOnPay = async (email, id) => {
     const update = checkout({
-      lineItems: [{ price: "price_1M40SMSFYXbhaPgGRFzG2Sbr", quantity: 1 }],
+      lineItems: [{ price: "price_1MC6jWSFYXbhaPgGItHlOCnM", quantity: 1 }],
     });
     const updatedPayment = await axios.put(
       `${process.env.NEXT_PUBLIC_HOST}api/farmer/bookDrone?email=${user.email}`,

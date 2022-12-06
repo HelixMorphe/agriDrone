@@ -42,7 +42,7 @@ const RoleSelection = ({ session, data }) => {
                 }`}
               >
                 <Image
-                  src="/assets/farmer.png"
+                  src="/assets/Farmer-standing-in-field.jpeg.jpg"
                   objectFit="cover"
                   layout="fill"
                   className="cursor-pointer rounded-full"
@@ -63,7 +63,7 @@ const RoleSelection = ({ session, data }) => {
                 }`}
               >
                 <Image
-                  src="/assets/pilot.png"
+                  src="/assets/pexels-josh-sorenson-1034812.jpg"
                   objectFit="cover"
                   layout="fill"
                   className="cursor-pointer rounded-full"
